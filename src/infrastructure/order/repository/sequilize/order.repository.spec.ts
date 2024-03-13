@@ -228,7 +228,7 @@ describe("Order repository test", () => {
     orderItem1.changePrice(100);
     orderItem2.changeQuantity(1);
 
-    console.log(order);
+    // console.log(order);
     
     await orderRepository.update(order);
 
@@ -237,7 +237,7 @@ describe("Order repository test", () => {
       include: ["items"],
     });
 
-    console.log(updatedOrderModel.toJSON());
+    // console.log(updatedOrderModel.toJSON());
 
 
     expect(updatedOrderModel.toJSON().items[1].quantity).toBe(1);
