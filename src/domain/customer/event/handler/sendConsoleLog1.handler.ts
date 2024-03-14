@@ -2,7 +2,7 @@ import EventHandlerInterface from "../../../@shared/event/event-handler.interfac
 import CustomerCreatedEvent from "../customer-created.event";
 
 export default class SendConsoleLog1Handler implements EventHandlerInterface<CustomerCreatedEvent> {
-    handle() {
+    handle(event: CustomerCreatedEvent) {
         console.log("Esse é o primeiro console.log do evento: CustomerCreated");
     }
 }
